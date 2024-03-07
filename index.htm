@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Tab</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="main">
+      <div id="currentTimeContainer">
+        <div id="timeContainer">
+          <h1 id="hour">0</h1>
+          <h1>:</h1>
+          <h1 id="minutes">0</h1>
+          <h1>:</h1>
+          <h1 id="seconds">0</h1>
+          <h1 id="ampm">AM</h1>
+        </div>
+        <h3 id="message">Message</h3>
+      </div>
+      <div id="searchContainer">
+        <div class="searchBox">
+          <input
+            type="text"
+            name=""
+            class="query"
+            placeholder="Search Google or type a URL"
+          />
+          <img src="images/icons8-search-50.png" alt="" id="searchIcon" />
+          <img
+            src="images/mic.png"
+            alt=""
+            id="micIcon"
+            title="Search by voice"
+          />
+          <div class="button">
+            <button class="searchBtn" title="Search">Search</button>
+          </div>
+        </div>
+      </div>
+      <div id="links">
+        <a href="https://www.youtube.com" target="_blank">
+          <div class="linkBox">
+            <div class="logo">
+              <img src="images/youtubeLogo.png" alt="Y" />
+            </div>
+            <a href="https://www.youtube.com" target="_blank">YouTube</a>
+          </div>
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+          <div class="linkBox">
+            <div class="logo">
+              <img src="images/FacebookLogo.png" alt="F" />
+            </div>
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+          </div>
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <div class="linkBox">
+            <div class="logo">
+              <img src="images/InstagramLogo.png" alt="I" />
+            </div>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+          </div>
+        </a>
+        <a href="https://www.cricbuzz.com/" target="_blank">
+          <div class="linkBox">
+            <div class="logo">
+              <img src="images/cricbuzzLogo.png" alt="" />
+            </div>
+            <a href="https://www.cricbuzz.com/" target="_blank">Cricbuzz</a>
+          </div>
+        </a>
+        <a href="https://www.npmjs.com/" target="_blank">
+          <div class="linkBox">
+            <div class="logo">
+              <img src="images/npm.svg" alt="" style="width: 25px; height:25px;" />
+            </div>
+            <a href="https://www.npmjs.com/" target="_blank">npmjs</a>
+          </div>
+        </a>
+        <a href="https://www.flipkart.com/" target="_blank">
+          <div class="linkBox">
+            <div class="logo">
+              <img src="images/flipkartLogo.png" alt="" style="width: 25px; height:25px;" />
+            </div>
+            <a href="https://www.flipkart.com/" target="_blank">Flipkart</a>
+          </div>
+        </a>
+        <a href="https://chat.openai.com/" target="_blank">
+          <div class="linkBox">
+            <div class="logo">
+              <img src="images/chatgptLogo.png" alt="" style="width: 25px; height:25px;" />
+            </div>
+            <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>
+          </div>
+        </a>
+        <a href="https://www.getbootstrap.com/" target="_blank">
+          <div class="linkBox">
+            <div class="logo">
+              <img src="images/bootstrapLogo.png" alt="" />
+            </div>
+            <a href="https://www.getbootstrap.com/" target="_blank">Bootstrap</a>
+          </div>
+        </a>
+        <a href="https://www.github.com/" target="_blank">
+          <div class="linkBox">
+            <div class="logo">
+              <img src="images/githubLogo.png" alt="" />
+            </div>
+            <a href="https://www.github.com/" target="_blank">GitHub</a>
+          </div>
+        </a>
+        <a href="https://mail.google.com/mail/?tab=rm&authuser=0&ogbl" target="_blank">
+          <div class="linkBox">
+            <div class="logo">
+              <img src="images/gmailLogo.png" alt="" style="width: 25px; height:25px;" />
+            </div>
+            <a href="https://mail.google.com/mail/?tab=rm&authuser=0&ogbl" target="_blank">Gmail</a>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div id="addNewShortcut">
+      <div id="shortcutContent">
+        <div id="shortcutContentTop">
+          <p>Add shortcut</p>
+          <div class="titleForm">
+            <input type="text" id="inputedTitle" /><label>Name</label>
+          </div>
+          <div class="titleForm">
+            <input type="text" name="" id="inputedURL" /><label>URL</label>
+          </div>
+        </div>
+        <div id="shortcutContentBottom">
+          <button id="cancelBtn">Cancel</button>
+          <button id="doneBtn">Done</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

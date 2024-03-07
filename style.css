@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+#main{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('images/bg.jpg');
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    animation: changeBg 4s linear infinite;
+}
+#currentTimeContainer{
+    width: 50%;
+    padding: 1vw 4vw;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5w;
+    color: #fff;
+}
+#timeContainer{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+#timeContainer h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5vmax;
+    letter-spacing: -.5px;
+    font-weight: 900;
+    text-shadow:3px 3px 14px rgb(131, 1, 131), -2px 1px 28px rgb(131, 1, 131);
+}
+#message{
+    font-family:Bahnschrift;
+    font-weight: bold;
+    font-size: 3vmin;
+    text-shadow: 3px 3px 4px purple, -2px 1px 8px purple;
+}
+#searchContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    padding: 1vw 2vw;
+    align-items: center;
+}
+.searchBox{
+    width: 45%;
+    display: flex;
+    position: relative;
+}
+.searchBox .query{
+    width: 100%;
+    font-size: 16px;
+    padding:10px 40px;
+    padding-right: 65px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 25px;
+    background-color: #fff;
+}
+#searchIcon{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 27%;
+    left:10px;
+    opacity: 0.6;
+}
+#micIcon{
+    position: absolute;
+    right:85px;
+    top:27%;
+    width: 15px;
+    height: 18px;
+    cursor: pointer;
+}
+.button{
+    display: flex;
+    align-items: center;
+}
+.searchBtn{
+    margin-left:-20px;
+    padding: 0.7rem 0.8rem;
+    color: #555;
+    border:1px solid #ccc;
+    background-color:#fff;
+    outline:none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius:0px 20px 20px 0px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#links{
+    width: 50%;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 1vw 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.linkBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 8px;
+    border-radius: 8px;
+}
+.linkBox:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+.linkBox .logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #555555da;
+    margin: 1vw;
+    padding:6px;
+    transition: 0.6s ease;
+}
+.linkBox .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.linkBox a,.linkBox p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addNew:link,.addNew:active,.addNew:visited{
+    text-decoration: none;
+    color: #fff;
+}
+.logo p{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 500;
+    cursor: pointer;
+}
+#addNewShortcut{
+    width: 40vw;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 15px;
+    display:none;
+    justify-content: center;
+    align-items: center;
+}
+#shortcutContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 35px;
+
+}
+#shortcutContentTop{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#shortcutContentTop p{
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    padding: 5px 0px;
+    font-family:Bahnschrift;
+    opacity: 0.9;
+}
+#shortcutContentTop .titleForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.titleForm label{
+    font-size: 12px;
+    padding: 4px 0;
+    opacity: 0.9;
+    font-family: Bahnschrift;
+    position: absolute;
+    left: 0;
+    top: -25px;
+}
+.titleForm input{
+    border: none;
+    background-color: #F1F3F4;
+    padding: 8px 8px; 
+    border-radius: 4px;
+    outline:none;
+    position: relative;
+}
+.titleForm input:focus {
+    border-bottom: 2px solid #3382EB;
+}
+.titleForm input:focus ~ label{
+    color: #3382EB;
+}
+
+#shortcutContentBottom{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+#shortcutContentBottom button{
+    padding: 7px 12px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+#shortcutContentBottom button:first-child{
+    background-color: transparent;
+    border: 1px solid #DADCE0;
+    color: #3382EB;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+#shortcutContentBottom button:nth-child(2){
+    background-color: #F1F3F4;
+    border: none;
+    outline: none;
+    color: #81878C;
+    cursor:default;
+}
+
+@media screen and (max-width:900px) {
+    .searchBox{
+        width: 90%;
+    }
+    .query{
+        width: 100%;
+    }
+    .searchBox .query{
+        padding-right: 55px;
+    }
+}
+@media screen and (max-width:410px) {
+    #links{
+        width: 100%;
+    }
+    .searchBox{
+        width: 100%;
+    }
+}
